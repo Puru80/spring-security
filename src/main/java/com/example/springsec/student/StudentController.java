@@ -14,7 +14,9 @@ public class StudentController {
     private static final List<Student> student = List.of(
             new Student(1, "Puru Agarwal"),
             new Student(2, "Shruti Jain"),
-            new Student(3, "Arin Agrawal")
+            new Student(3, "Arin Agrawal"),
+            new Student(4, "Raghav gupta"),
+            new Student(5, "Priyanshi Agrawal")
     );
 
     @GetMapping(path = "{studentId}")
@@ -24,5 +26,10 @@ public class StudentController {
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("Student " + studentId +
                         " does not exist"));
+    }
+
+    @GetMapping
+    public List<Student> getAllStudent(){
+        return student;
     }
 }
