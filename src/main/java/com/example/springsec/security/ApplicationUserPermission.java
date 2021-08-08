@@ -3,7 +3,7 @@ package com.example.springsec.security;
 public enum ApplicationUserPermission {
     STUDENT_WRITE("student:write"),
     STUDENT_READ("student:read"),
-    COURSE_WRITE("corse:write"),
+    COURSE_WRITE("course:write"),
     COURSE_READ("course:read");
 
     private final String permission;
@@ -15,4 +15,6 @@ public enum ApplicationUserPermission {
     public String getPermission() {
         return permission;
     }
+
+
 }
