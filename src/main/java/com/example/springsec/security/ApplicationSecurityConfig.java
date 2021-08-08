@@ -33,7 +33,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         //Authorise every request using Basic Auth
         http
-                .csrf().disable()
+                .csrf().disable()//TODO: Pending
                 .authorizeRequests()
                 //Order of the antMatchers MATTERS
                 .antMatchers("/", "index", "/css/*", "/js/*").permitAll()
